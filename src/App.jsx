@@ -1,12 +1,18 @@
 
 import './App.css'
+import Footer from './component/Footer'
+import Navbar from './component/Navbar'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <>
-     
-      <h1>Travel and Tourism Management System</h1>
+      <Navbar></Navbar>
+      <Home></Home>
+            <Footer></Footer>
+   
+      
     
     </>
   )
