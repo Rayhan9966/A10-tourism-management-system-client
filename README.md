@@ -12,7 +12,7 @@
 - Details Tourist Place
 - User can be add tourist place to cart(dynamic Cart)
 - Add,Update Product
-- Authentication (email , password, googleLogin, githubLogin)
+- Authentication (email , password, googleLogin, facebookLogin)
 - 
 ## Package
 - React-Tooltip
