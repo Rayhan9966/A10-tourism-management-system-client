@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../component/AuthProvider';
 
 const Login = () => {
-	const user =useContext(AuthContext)
-	console.log(user)
+	const {loginUser} =useContext(AuthContext)
+
 
 
 	const handleLogin=(e)=>{
@@ -12,6 +12,7 @@ const Login = () => {
         const email=e.target.email.value;
         const password=e.target.password.value;
 console.log(email,password)
+loginUser(email,password)
 }
     return (
         <div className="ml-48 mt-20 p-35 h-2/4 w-2/3">
