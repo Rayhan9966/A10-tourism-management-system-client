@@ -8,6 +8,7 @@ import MyList from './pages/MyList.jsx';
 import About from './pages/About.jsx';
 import Login from './pages/Login.jsx';
 import TouristSpot from './pages/TouristSpot.jsx';
+import TouristCard from './pages/TouristCard.jsx';
 import Register from './pages/Register.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 
@@ -37,12 +38,18 @@ const router = createBrowserRouter([
         element:<Home></Home>,
     },
     {
+
+      path:'/',
+      element:<TouristCard></TouristCard>,
+  },
+    {
       path: "/about",
       element:<About></About>,
     },
       {
         path: "/touristspot",
         element:<TouristSpot></TouristSpot>,
+        loader: ()=> fetch('http://localhost:5000/touristspot')
       },
       
       {
@@ -55,6 +62,10 @@ const router = createBrowserRouter([
         path: "/mylist",
         element:<PrivateRoute><MyList></MyList></PrivateRoute>,
       },
+      // {
+      //   path: "/update",
+      //   element:<UpDate></UpDate>,
+      // },
       {
         path: "/login",
         element:<Login></Login>,
