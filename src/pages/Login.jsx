@@ -1,9 +1,12 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../component/AuthProvider';
 
 const Login = () => {
-	const {loginUser,googleLogin,setUser,facebookLogin} =useContext(AuthContext)
+	const {loginUser,googleLogin,setUser,facebookLogin,user} =useContext(AuthContext)
+	const location= useLocation()
+const navigate=useNavigate()
+console.log(location);
 	// const[error,setError]=useState("")
 
 
@@ -23,6 +26,13 @@ loginUser(email,password)
 		facebookLogin()
 		.then(result => setUser(result.user))
 	}
+
+	useEffect(()=>{
+if(user){
+	navigate(location.state)
+}
+
+	},[user])
 // if(password !== password){
 //     setError("Password did't match")
 //     return

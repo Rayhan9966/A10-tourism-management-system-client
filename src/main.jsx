@@ -18,6 +18,7 @@ import {
 } from "react-router-dom";
 import Root from './component/Root.jsx'
 import AuthProvider from './component/AuthProvider.jsx';
+import PrivateRoute from './component/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -43,13 +44,16 @@ const router = createBrowserRouter([
         path: "/touristspot",
         element:<TouristSpot></TouristSpot>,
       },
+      
       {
-        path: "/addtouristspot",
-        element:<AddTouristSpot></AddTouristSpot>,
+       path: "/addtouristspot",
+       element:<PrivateRoute>
+        <AddTouristSpot></AddTouristSpot>
+        </PrivateRoute>,
       },
       {
         path: "/mylist",
-        element:<MyList></MyList>,
+        element:<PrivateRoute><MyList></MyList></PrivateRoute>,
       },
       {
         path: "/login",

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
 const Navbar = () => {
-  const {user}=useContext(AuthContext)
+  const {user,logOut}=useContext(AuthContext)
   console.log(user);
     const [theme, setTheme]= useState('light')
     useEffect(()=>{
@@ -49,7 +49,11 @@ const Navbar = () => {
         </details>
         </li>
         <li><Link to='/about'>About</Link></li>
-      <li><Link to='/addtouristspot'>Add Tourist Spot</Link></li>
+      {
+      user && 
+      <li><Link to='/addtouristspot'>Add Tourist Spot</Link>
+      </li>
+      }
       <li><Link to='/mylist'>MyList</Link></li>
       </ul>
     </div>
@@ -74,7 +78,11 @@ const Navbar = () => {
         </details>
       </li>
       <li><Link to='/about'>About</Link></li>
-      <li><Link to='/addtouristspot'>Add Tourist Spot</Link></li>
+      {
+      user && 
+      <li><Link to='/addtouristspot'>Add Tourist Spot</Link>
+      </li>
+      }
       <li><Link to='/mylist'>MyList</Link></li>
     </ul>
   </div>
@@ -82,7 +90,7 @@ const Navbar = () => {
   <div className="navbar-end">
   {user ? <div>
       {user.email}
-     <Link to="/"> <button onClick={()=>logout()}>Logout</button> </Link>
+     <Link to="/"> <button onClick={()=>logOut()}>Logout</button> </Link>
     </div>:""}
   <label className="cursor-pointer grid place-items-center">
   <input onChange={handleToggle} type="checkbox" 
