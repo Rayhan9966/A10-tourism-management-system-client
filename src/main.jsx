@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: "/touristspot",
         element:<TouristSpot></TouristSpot>,
-        loader: ()=> fetch('http://localhost:5000/touristspot')
+        loader: ()=> fetch(`https://travel-tourism-server.vercel.app/touristspot`)
       },
       
       {
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
       // {
       //   path: "/updatespot/:id",
       //   element:<UpDateSpot></UpDateSpot>,
-      //   loader: ({params})=> fetch(`http://localhost:5000/touristspot/${params.id}`)
+      //   loader: ({params})=> fetch(`https://travel-tourism-server-k8z4ujrfc-mohammed-rayhan-uddins-projects.vercel.app/touristspot/${params.id}`)
       // },
       {
         path: "/login",

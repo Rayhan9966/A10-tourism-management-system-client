@@ -23,8 +23,9 @@ Swal.fire({
   }).then((result) => {
 	if (result.isConfirmed) {
 	
-	fetch(`http://localhost:5000/touristspot/${_id}`,{
+	fetch(`https://travel-tourism-server.vercel.app/touristspot/${_id}`,{
 		method:'DELETE'
+		
 	})
 	.then(res=> res.json())
 	.then(data=>{
