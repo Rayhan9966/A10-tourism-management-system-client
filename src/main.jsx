@@ -11,6 +11,7 @@ import TouristSpot from './pages/TouristSpot.jsx';
 import TouristCard from './pages/TouristCard.jsx';
 import Register from './pages/Register.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
+import UpDateSpot from './CRUD/UpdateSpot.jsx'
 
 import './index.css'
 import {
@@ -63,8 +64,9 @@ const router = createBrowserRouter([
         element:<PrivateRoute><MyList></MyList></PrivateRoute>,
       },
       // {
-      //   path: "/update",
-      //   element:<UpDate></UpDate>,
+      //   path: "/updatespot/:id",
+      //   element:<UpDateSpot></UpDateSpot>,
+      //   loader: ({params})=> fetch(`http://localhost:5000/touristspot/${params.id}`)
       // },
       {
         path: "/login",

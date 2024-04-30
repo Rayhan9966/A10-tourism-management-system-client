@@ -58,6 +58,7 @@ Swal.fire({
 			<div className="flex items-center text-xs gap-2">
 				<span><button className='btn btn-primary'>Add</button></span>
 				<span><button className='btn btn-block'>Update</button></span>
+				{/* <span><Link to={`/update/${_id}`}><button className='btn btn-block'>Update</button></Link></span> */}
 				<span><button
 				onClick={()=>handleDelete(_id)}
 				 className='btn btn-error'>Delete</button></span>
