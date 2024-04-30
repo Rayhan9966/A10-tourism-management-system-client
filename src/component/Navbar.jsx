@@ -33,7 +33,7 @@ const Navbar = () => {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><Link to='/'>Home</Link></li>
-      <li><Link to='/touristspot'>Tourist Spot</Link></li>
+      <li><Link to='/touristspot'>Added All Tourist Spot</Link></li>
         {/* <li><a>Home</a></li> */}
         <li>
         <details>
@@ -63,7 +63,7 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link to='/'>Home</Link></li>
-      <li><Link to='/touristspot'>Tourist Spot</Link></li>
+      <li><Link to='/touristspot'>Added All Tourist Spot</Link></li>
       <li>
         <details>
           <summary>Countries</summary>

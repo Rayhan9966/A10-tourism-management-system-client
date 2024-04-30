@@ -10,7 +10,7 @@ const TouristSpot = () => {
 
     return (
         <div >
-            <h1>All touristspt:{dataInfo.length}</h1>
+            <h1>Added Tpurist Spot:{dataInfo.length}</h1>
             <div className='grid md:grid-cols-3 gap-2 '>
                 {/* {
 
