@@ -37,11 +37,11 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home></Home>,
     },
-    {
+  //   {
 
-      path:'/',
-      element:<TouristCard></TouristCard>,
-  },
+  //     path:'/touristspot',
+  //     element:<TouristCard></TouristCard>,
+  // },
     {
       path: "/about",
       element:<About></About>,

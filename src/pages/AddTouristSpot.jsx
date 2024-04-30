@@ -58,7 +58,7 @@ fetch('http://localhost:5000/touristspot',{
 				<span className="label-text">Image URL</span>
 			</label>
 			<label className="input-group">
-				<input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
+				<input type="text" name="image" placeholder="Photo URL" className="input input-bordered w-full" />
 			</label>
 		</div>
 	</div>
