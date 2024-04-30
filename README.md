@@ -1,9 +1,9 @@
 
 # B9 A10 Type-01 Requirements
 
-### Live Link :
+### Live Link : https://assignment10-travel-tourist.web.app
 
-
+### Catagory :Southeast Asia
 ### key Features
 
 
